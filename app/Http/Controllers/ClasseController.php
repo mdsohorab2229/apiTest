@@ -5,6 +5,7 @@ use App\Models\Classe;
 use Illuminate\Support\Facades\DB;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class ClasseController extends Controller
 {
@@ -45,4 +46,5 @@ class ClasseController extends Controller
         DB::table('classes')->where('id',$id)->delete();
         return response()->json('delete success full');
     }
+
 }
